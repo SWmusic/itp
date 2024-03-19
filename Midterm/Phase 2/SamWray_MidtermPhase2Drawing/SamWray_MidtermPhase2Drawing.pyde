@@ -2,7 +2,7 @@ def setup():
     size(100, 100)
     background(255)
 def draw():
-    fill(255)
+    noFill()
     ellipse(50, 60, 40, 40)
     ellipse(40, 70, 40, 40)
     ellipse(60, 70, 40, 40)
