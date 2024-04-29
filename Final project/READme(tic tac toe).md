@@ -41,3 +41,5 @@ To make the player go first, I made the while loop containing the statement: if(
 To fix the wine condition, I figured that the computer needed to check for a winner every single turn after a certain point. There is no need to check for a winner at the start, as there will not have been enough moves to have anyone win. So, I put a while loop in the player 1 turn while loop, where while turnCounter >= 4 (4, because this means the player will have gone 3 times, enough to win). Success! But...
 
 When you win, it prints x has won! Infinitely. How to fix? Let's find out. Well, by adding a break function inside the while loop, it stops printing infinitely. But, the game keeps going even while printing "x has won!". Even after adding exit functions won't exit even if the win condition is met.
+
+Okay after contacting my friend from Texas, he told me to add from sys import exit, and to change my exit functions to exit(0) functions and boom. We have functional wins now.

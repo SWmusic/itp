@@ -1,3 +1,4 @@
+from sys import exit
 import random
 
 # asks for player name
@@ -108,10 +109,10 @@ while(leaveLoop == False):
             game_state = check_for_winner(gameBoard)
             if game_state == 'X':
                 print('X has won!')
-                exit
+                exit(0)
             elif game_state == 'O':
                 print('O has won. :(')
-                exit
+                exit(0)
             break
                 
     # computer turn
