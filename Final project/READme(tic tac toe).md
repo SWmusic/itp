@@ -1,5 +1,11 @@
 # This is Sam's final project in LMSC-261!
 
+## Really quickly before I do that!
+
+This is a link to the repository/ folder of Pt. 2 of the project, the text adventure I made.
+
+https://github.com/SWmusic/game-stuff/tree/main/1.%20Deepstone%20(WIP)
+
 ## Chronicle of everything I did to construct Tic Tac Toe.
 
 Because this part of the project is following a video guide, I figured by detailing what I did and writing what my understanding of why everything was why it was would help you to see that I actually learned from this instead of just copying it. You will also see that I might've added extra stuff in to personalize my project a little more.
@@ -38,8 +44,10 @@ Because I am now delegating printing the win strings at the end, there was no ne
 
 To make the player go first, I made the while loop containing the statement: if(turnCounter % 2 == 1) change to being if(turnCounter % 2 == 0). This way since the turnCounter begins on 0, the player will go first since 0 % 2 = 0. Subsequently, the player 1 will have their turn on every even number. This is important later.
 
-To fix the wine condition, I figured that the computer needed to check for a winner every single turn after a certain point. There is no need to check for a winner at the start, as there will not have been enough moves to have anyone win. So, I put a while loop in the player 1 turn while loop, where while turnCounter >= 4 (4, because this means the player will have gone 3 times, enough to win). Success! But...
+To fix the win condition, I figured that the computer needed to check for a winner every single turn after a certain point. There is no need to check for a winner at the start, as there will not have been enough moves to have anyone win. So, I put a while loop in the player 1 turn while loop, where while turnCounter >= 4 (4, because this means the player will have gone 3 times, enough to win). Success! But...
 
 When you win, it prints x has won! Infinitely. How to fix? Let's find out. Well, by adding a break function inside the while loop, it stops printing infinitely. But, the game keeps going even while printing "x has won!". Even after adding exit functions won't exit even if the win condition is met.
 
 Okay after contacting my friend from Texas, he told me to add from sys import exit, and to change my exit functions to exit(0) functions and boom. We have functional wins now.
+
+Project complete!
